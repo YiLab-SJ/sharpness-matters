@@ -1,0 +1,14 @@
+pytorch-lightning==2.1.1
+timm==0.9.5
+ray[tune]==2.10.0
+optuna==4.1.0
+transformers==4.34.0
+pydicom==2.4.1
+tqdm==4.65.0
+grad-cam==1.5.4
+opencv-python==4.8.0.74
+pydantic<2.0.0
+MLstatkit
+statsmodels
+nibabel
+ptflops

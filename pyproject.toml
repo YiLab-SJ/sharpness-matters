@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sharpness_matters"
+version = "0.1.0"
+description = "Source Code for the Paper: Sharpness Matters. Rethinking the Impact of Image Resolution on Medical Image Classification"
+authors = [
+    { name = "Aditya Kulkarni, John Zech, Paul Yi", email = "adityavikas.kulkarni@stjude.org" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = "3.8.10"
+
+dependencies = [
+    "pytorch-lightning==2.1.1",
+    "timm==0.9.5",
+    "ray[tune]==2.10.0",
+    "optuna==4.1.0",
+    "transformers==4.34.0",
+    "pydicom==2.4.1",
+    "tqdm==4.65.0",
+    "grad-cam==1.5.4",
+    "opencv-python==4.8.0.74",
+    "pydantic<2.0.0",
+    "MLstatkit==0.1.7",
+    "statsmodels==0.14.1",
+    "nibabel==5.2.1",
+    "ptflops==0.7.3",
+    "python-gdcm==3.0.25"
+    "seaborn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sharpness_matters*"]

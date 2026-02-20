@@ -1,0 +1,18 @@
+ptx:
+  siim_acr: 
+    root_dir: "/research_jude/rgs01_jude/groups/pyigrp/projects/opendatashare/common/public_datasets/pneumothorax/siim_acr/"
+  vin_dr: 
+    root_dir: "/research_jude/rgs01_jude/groups/pyigrp/projects/opendatashare/common/public_datasets/pneumothorax/vinbig/train_vin"
+  ptx498: 
+    root_dir: "/research_jude/rgs01_jude/groups/pyigrp/projects/opendatashare/common/public_datasets/pneumothorax/ptx498_ood_test"
+  model:
+    checkpoint_dir: "/home/akulka63/Code/sharpness_matters/sharpness_matters/ptx/output/5_fold_cv"
+    tuned_checkpoint_dir: "/home/akulka63/Code/sharpness_matters/sharpness_matters/ptx/output/5_fold_cv_tuned"
+pneumonia:
+  rsna_pneumonia:
+    root_dir: "/research_jude/rgs01_jude/groups/pyigrp/projects/opendatashare/common/public_datasets/pneumonia/rsna_pneumonia"
+  siim_covid: 
+    root_dir: "/research_jude/rgs01_jude/groups/pyigrp/projects/opendatashare/common/public_datasets/pneumonia/siim_covid"
+  model:
+    checkpoint_dir: "/home/akulka63/Code/sharpness_matters/sharpness_matters/ptx/output/5_fold_cv"
+    tuned_checkpoint_dir: "/home/akulka63/Code/sharpness_matters/sharpness_matters/pneumonia/output/5_fold_cv_tuned"
