@@ -111,7 +111,7 @@ def fetch_eval_per_resolution(
             dataset, batch_size=16, num_workers=32, shuffle=False, collate_fn=collate_fn
         )
     else:
-        raise ("Invalid validation mode: Choose one of holdout, ood")
+        raise ValueError("Invalid validation mode: Choose one of holdout, ood")
     all_labels, all_logits_ensemble, ensemble_metrics = eval_res(
         val_loader, CNNBinaryClassifier, logger, img_size, model_name
     )

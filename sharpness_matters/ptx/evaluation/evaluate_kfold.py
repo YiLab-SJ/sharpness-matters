@@ -68,7 +68,7 @@ def fetch_results_per_resolution(
         ptx_dataset = OODTestDataset(img_size=img_size)
         dataset = ConcatDataset([dataset, ptx_dataset])
     else:
-        raise ("Invalid validation mode: Choose one of holdout, ood")
+        raise ValueError("Invalid validation mode: Choose one of holdout, ood")
     # Compute evaluation metrics for given resolution
     all_labels, all_logits_ensemble, ensemble_metrics = eval_res(
         dataset, img_size, model_name, CNNBinaryClassifier, logger
