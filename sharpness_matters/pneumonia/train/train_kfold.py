@@ -26,7 +26,7 @@ from sharpness_matters.pneumonia.models.cnn import CNNBinaryClassifier
 from sharpness_matters.config.load_config import cfg
 
 HOME = Path(__file__).resolve().parent.parent
-DATA_DIR = cfg.pneumonia.rsna.root_dir
+DATA_DIR = cfg.pneumonia.rsna_pneumonia.root_dir
 CHECKPOINT_DIR = cfg.pneumonia.model.checkpoint_dir
 
 
@@ -125,7 +125,7 @@ def train_with_kfold(
         # Trainer
         trainer = Trainer(
             max_epochs=num_epochs,
-            devices=[1],
+            devices=[0],
             default_root_dir=f"{CHECKPOINT_DIR}/{model_name}/{model_name}_{img_size}_logs",
             callbacks=callbacks,
             accelerator="auto",  # Automatically use GPU if available

@@ -32,7 +32,7 @@ from sharpness_matters.pneumonia.models.cnn import CNNBinaryClassifier
 from sharpness_matters.config.load_config import cfg
 
 HOME = Path(__file__).resolve().parent.parent
-DATA_DIR = cfg.pneumonia.rsna.root_dir
+DATA_DIR = cfg.pneumonia.rsna_pneumonia.root_dir
 
 
 def stratified_split(

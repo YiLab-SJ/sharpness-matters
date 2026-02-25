@@ -75,6 +75,8 @@ class ChestXrayDataset(Dataset):
             logger.info(
                 f"Cache dir for saved labels and dataset stats not found. Generating split and labels."
             )
+            os.makedirs(os.path.dirname(label_cache_dir), exist_ok=True)
+            os.makedirs(os.path.dirname(stats_dir), exist_ok=True)
             self.labels, self.global_stats = self.process_labels(label_df)
             with open(label_cache_dir, "wb") as handle:
                 pickle.dump(self.labels, handle)

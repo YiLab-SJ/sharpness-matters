@@ -71,6 +71,8 @@ class ChestXrayHoldout(Dataset):
             with open(stats_dir, "rb") as f:
                 self.global_stats = pickle.load(f)
         else:
+            os.makedirs(os.path.dirname(label_cache_dir), exist_ok=True)
+            os.makedirs(os.path.dirname(stats_dir), exist_ok=True)
             annotations, self.global_stats = self.process_labels(
                 label_df, self.image_ids
             )
@@ -80,6 +82,7 @@ class ChestXrayHoldout(Dataset):
                 pickle.dump(annotations, handle)
             with open(stats_dir, "wb") as f:
                 pickle.dump(self.global_stats, f)
+            logger.info(f"Processed and cached labels and statistics at {label_cache_dir} and {stats_dir}")
         self.mean, self.std = self.global_stats["mean"], self.global_stats["std"]
         logger.debug(f"Mean : {self.mean}, Std: {self.std}")
         logger.debug(f"Labels: {len(self.labels)}")

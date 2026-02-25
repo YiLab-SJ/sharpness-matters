@@ -10,8 +10,7 @@ authors = [
     { name = "Aditya Kulkarni, John Zech, Paul Yi", email = "adityavikas.kulkarni@stjude.org" }
 ]
 readme = "README.md"
-license = { file = "LICENSE" }
-requires-python = "3.8.10"
+requires-python = "~=3.8.10"
 
 dependencies = [
     "pytorch-lightning==2.1.1",
@@ -28,7 +27,7 @@ dependencies = [
     "statsmodels==0.14.1",
     "nibabel==5.2.1",
     "ptflops==0.7.3",
-    "python-gdcm==3.0.25"
+    "python-gdcm==3.0.25",
     "seaborn",
 ]
 

@@ -71,6 +71,8 @@ class ChestXrayOOD(Dataset):
             with open(stats_dir, "rb") as f:
                 self.global_stats = pickle.load(f)
         else:
+            os.makedirs(os.path.dirname(label_cache_dir), exist_ok=True)
+            os.makedirs(os.path.dirname(stats_dir), exist_ok=True)
             annotations, self.global_stats = self.process_labels(
                 image_df=image_label_df, study_df=study_label_df, arr=self.study_ids
             )
