@@ -170,28 +170,6 @@ python evaluation/p_value_saliency.py --dataset external --model_name resnet
 python evaluation/computational_usage.py --model_name densenet
 ```
 
-## Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature-name`
-3. Install in development mode: `pip install -e .[dev]`
-4. Make your changes
-5. Run tests: `pytest`
-6. Format code: `black sharpness_matters/`
-7. Submit a pull request
-
-### Reporting Issues
-
-Please use GitHub Issues to report bugs or request features. Include:
-- Python version and environment details
-- Steps to reproduce the issue
-- Expected vs actual behavior
-- Relevant error messages
-
 ## Citation
 
 If you use this code in your research, please cite our paper:
