@@ -142,6 +142,9 @@ python train/train_sweep.py
 ```bash
 python evaluation/evaluate_kfold.py --validation_mode holdout
 
+# If using ptx (vindr) else skip the next line
+python dataset/create_vin_dr_subset.py
+
 python evaluation/evaluate_kfold.py --validation_mode ood
 ```
 
